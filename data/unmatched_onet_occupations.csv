@@ -1,0 +1,56 @@
+onet_soc_code,soc_code,occupation_title
+11-1031.00,11-1031,Legislators
+13-1021.00,13-1021,"Buyers and Purchasing Agents, Farm Products"
+13-1022.00,13-1022,"Wholesale and Retail Buyers, Except Farm Products"
+13-1023.00,13-1023,"Purchasing Agents, Except Wholesale, Retail, and Farm Products"
+13-2022.00,13-2022,Appraisers of Personal and Business Property
+13-2023.00,13-2023,Appraisers and Assessors of Real Estate
+21-1011.00,21-1011,Substance Abuse and Behavioral Disorder Counselors
+21-1014.00,21-1014,Mental Health Counselors
+25-2055.00,25-2055,"Special Education Teachers, Kindergarten"
+25-2056.00,25-2056,"Special Education Teachers, Elementary School"
+25-9042.00,25-9042,"Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education"
+25-9043.00,25-9043,"Teaching Assistants, Special Education"
+25-9049.00,25-9049,"Teaching Assistants, All Other"
+29-2011.00,29-2011,Medical and Clinical Laboratory Technologists
+29-2011.01,29-2011,Cytogenetic Technologists
+29-2011.02,29-2011,Cytotechnologists
+29-2011.04,29-2011,Histotechnologists
+29-2012.00,29-2012,Medical and Clinical Laboratory Technicians
+29-2012.01,29-2012,Histology Technicians
+31-1121.00,31-1121,Home Health Aides
+31-1122.00,31-1122,Personal Care Aides
+39-7011.00,39-7011,Tour Guides and Escorts
+39-7012.00,39-7012,Travel Guides
+45-3031.00,45-3031,Fishing and Hunting Workers
+47-4091.00,47-4091,Segmental Pavers
+47-4099.00,47-4099,"Construction and Related Workers, All Other"
+47-4099.03,47-4099,Weatherization Installers and Technicians
+51-2022.00,51-2022,Electrical and Electronic Equipment Assemblers
+51-2023.00,51-2023,Electromechanical Equipment Assemblers
+51-2092.00,51-2092,Team Assemblers
+51-2099.00,51-2099,"Assemblers and Fabricators, All Other"
+53-1042.00,53-1042,"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand"
+53-1042.01,53-1042,Recycling Coordinators
+53-1043.00,53-1043,First-Line Supervisors of Material-Moving Machine and Vehicle Operators
+53-1044.00,53-1044,First-Line Supervisors of Passenger Attendants
+53-1049.00,53-1049,"First-Line Supervisors of Transportation Workers, All Other"
+55-1011.00,55-1011,Air Crew Officers
+55-1012.00,55-1012,Aircraft Launch and Recovery Officers
+55-1013.00,55-1013,Armored Assault Vehicle Officers
+55-1014.00,55-1014,Artillery and Missile Officers
+55-1015.00,55-1015,Command and Control Center Officers
+55-1016.00,55-1016,Infantry Officers
+55-1017.00,55-1017,Special Forces Officers
+55-1019.00,55-1019,"Military Officer Special and Tactical Operations Leaders, All Other"
+55-2011.00,55-2011,First-Line Supervisors of Air Crew Members
+55-2012.00,55-2012,First-Line Supervisors of Weapons Specialists/Crew Members
+55-2013.00,55-2013,First-Line Supervisors of All Other Tactical Operations Specialists
+55-3011.00,55-3011,Air Crew Members
+55-3012.00,55-3012,Aircraft Launch and Recovery Specialists
+55-3013.00,55-3013,Armored Assault Vehicle Crew Members
+55-3014.00,55-3014,Artillery and Missile Crew Members
+55-3015.00,55-3015,Command and Control Center Specialists
+55-3016.00,55-3016,Infantry
+55-3018.00,55-3018,Special Forces
+55-3019.00,55-3019,"Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other"

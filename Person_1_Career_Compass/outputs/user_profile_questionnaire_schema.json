@@ -1,0 +1,119 @@
+[
+  {
+    "field": "interest_realistic",
+    "question": "How interested are you in hands-on, mechanical, outdoor, or practical work?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "interest_investigative",
+    "question": "How interested are you in research, analysis, science, or solving complex problems?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "interest_artistic",
+    "question": "How interested are you in creative, visual, writing, music, or design work?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "interest_social",
+    "question": "How interested are you in teaching, helping, counseling, or caring for others?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "interest_enterprising",
+    "question": "How interested are you in leadership, sales, persuasion, or starting projects?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "interest_conventional",
+    "question": "How interested are you in organized, detail-focused, administrative, or data work?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "education_preference",
+    "question": "What is the highest level of education you are willing to complete?",
+    "input": "selectbox",
+    "options": {
+      "Little or no formal education": 1,
+      "High school diploma or equivalent": 2,
+      "Some college or associate degree": 3,
+      "Bachelor's degree": 4,
+      "Graduate or professional degree": 5
+    }
+  },
+  {
+    "field": "job_zone_preference",
+    "question": "How much preparation and experience are you willing to complete?",
+    "input": "selectbox",
+    "options": {
+      "Job Zone 1 \u2014 little or no preparation": 1,
+      "Job Zone 2 \u2014 some preparation": 2,
+      "Job Zone 3 \u2014 medium preparation": 3,
+      "Job Zone 4 \u2014 high preparation": 4,
+      "Job Zone 5 \u2014 extensive preparation": 5
+    }
+  },
+  {
+    "field": "salary_importance",
+    "question": "How important is earning a higher salary?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "employment_importance",
+    "question": "How important is finding an occupation with many employment opportunities?",
+    "input": "slider",
+    "min": 1,
+    "max": 5
+  },
+  {
+    "field": "selected_skills",
+    "question": "Which skills do you most want to use?",
+    "input": "multiselect",
+    "options": [
+      "Active learning",
+      "Active listening",
+      "Critical thinking",
+      "Mathematics",
+      "Reading comprehension",
+      "Science",
+      "Speaking",
+      "Writing",
+      "Complex problem solving",
+      "Coordination",
+      "Instructing",
+      "Judgment and decision making",
+      "Financial resource management",
+      "Material resource management",
+      "Personnel management",
+      "Negotiation",
+      "Operation and control",
+      "Operations analysis",
+      "Operations monitoring",
+      "Persuasion",
+      "Programming",
+      "Quality control analysis",
+      "Repairing",
+      "Service orientation",
+      "Social perceptiveness",
+      "Systems analysis",
+      "Systems evaluation",
+      "Technology design",
+      "Time management",
+      "Troubleshooting"
+    ]
+  }
+]

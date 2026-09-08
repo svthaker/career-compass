@@ -1,0 +1,41 @@
+user_response,dataset_feature,mapping_type
+Realistic interest,interest_realistic,direct 1-5 preference
+Investigative interest,interest_investigative,direct 1-5 preference
+Artistic interest,interest_artistic,direct 1-5 preference
+Social interest,interest_social,direct 1-5 preference
+Enterprising interest,interest_enterprising,direct 1-5 preference
+Conventional interest,interest_conventional,direct 1-5 preference
+Education preference,education_expected_category,ordinal category 1-5
+Job-zone preference,job_zone,ordinal category 1-5
+Salary importance,median_wage_percentile,controls baseline weight
+Employment-opportunity importance,employment_percentile,controls baseline weight
+Active learning,essential_skill_active_learning_im,selected skill -> O*NET skill importance
+Active listening,essential_skill_active_listening_im,selected skill -> O*NET skill importance
+Critical thinking,essential_skill_critical_thinking_im,selected skill -> O*NET skill importance
+Mathematics,essential_skill_mathematics_im,selected skill -> O*NET skill importance
+Reading comprehension,essential_skill_reading_comprehension_im,selected skill -> O*NET skill importance
+Science,essential_skill_science_im,selected skill -> O*NET skill importance
+Speaking,essential_skill_speaking_im,selected skill -> O*NET skill importance
+Writing,essential_skill_writing_im,selected skill -> O*NET skill importance
+Complex problem solving,transferable_skill_complex_problem_solving_im,selected skill -> O*NET skill importance
+Coordination,transferable_skill_coordination_im,selected skill -> O*NET skill importance
+Instructing,transferable_skill_instructing_im,selected skill -> O*NET skill importance
+Judgment and decision making,transferable_skill_judgment_and_decision_making_im,selected skill -> O*NET skill importance
+Financial resource management,transferable_skill_management_of_financial_resources_im,selected skill -> O*NET skill importance
+Material resource management,transferable_skill_management_of_material_resources_im,selected skill -> O*NET skill importance
+Personnel management,transferable_skill_management_of_personnel_resources_im,selected skill -> O*NET skill importance
+Negotiation,transferable_skill_negotiation_im,selected skill -> O*NET skill importance
+Operation and control,transferable_skill_operation_and_control_im,selected skill -> O*NET skill importance
+Operations analysis,transferable_skill_operations_analysis_im,selected skill -> O*NET skill importance
+Operations monitoring,transferable_skill_operations_monitoring_im,selected skill -> O*NET skill importance
+Persuasion,transferable_skill_persuasion_im,selected skill -> O*NET skill importance
+Programming,transferable_skill_programming_im,selected skill -> O*NET skill importance
+Quality control analysis,transferable_skill_quality_control_analysis_im,selected skill -> O*NET skill importance
+Repairing,transferable_skill_repairing_im,selected skill -> O*NET skill importance
+Service orientation,transferable_skill_service_orientation_im,selected skill -> O*NET skill importance
+Social perceptiveness,transferable_skill_social_perceptiveness_im,selected skill -> O*NET skill importance
+Systems analysis,transferable_skill_systems_analysis_im,selected skill -> O*NET skill importance
+Systems evaluation,transferable_skill_systems_evaluation_im,selected skill -> O*NET skill importance
+Technology design,transferable_skill_technology_design_im,selected skill -> O*NET skill importance
+Time management,transferable_skill_time_management_im,selected skill -> O*NET skill importance
+Troubleshooting,transferable_skill_troubleshooting_im,selected skill -> O*NET skill importance

@@ -1,0 +1,13 @@
+check,result,action
+O*NET occupation rows,1016,Retained one row per full O*NET-SOC code
+Unique O*NET-SOC codes,1016,Expected to equal occupation rows
+Duplicate full O*NET-SOC codes,0,Removed exact identifier duplicates
+BLS national detailed occupation rows,830,"Filtered U.S., cross-industry, all ownership, detailed occupations"
+Unique BLS SOC codes,830,Used as many-to-one merge key
+Matched O*NET occupations,961,Retained BLS labor-market measures
+Unmatched O*NET occupations,55,Retained for review; no silent deletion
+BLS match rate,94.6%,Documented merge coverage
+Negative employment values,0,None expected
+Negative annual wage values,0,None expected
+Final rows,1016,One row per O*NET occupation
+Final columns,408,"Includes identifiers, O*NET features, BLS measures, engineered features"

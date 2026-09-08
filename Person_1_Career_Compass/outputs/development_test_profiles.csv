@@ -1,0 +1,7 @@
+profile_name,interest_realistic,interest_investigative,interest_artistic,interest_social,interest_enterprising,interest_conventional,education_preference,job_zone_preference,salary_importance,employment_importance,selected_skills
+Data and Technology,2,5,2,2,3,4,4,4,5,4,"['Programming', 'Critical thinking', 'Systems analysis', 'Mathematics']"
+Healthcare,2,4,1,5,2,3,5,5,3,5,"['Active listening', 'Science', 'Service orientation', 'Social perceptiveness']"
+Business,2,3,2,3,5,4,4,4,5,4,"['Persuasion', 'Negotiation', 'Financial resource management', 'Judgment and decision making']"
+Skilled Trades,5,2,1,2,2,3,2,2,4,5,"['Repairing', 'Troubleshooting', 'Operation and control', 'Quality control analysis']"
+Creative Careers,2,2,5,3,3,2,4,4,3,2,"['Writing', 'Speaking', 'Technology design', 'Active learning']"
+Social Services,1,3,2,5,3,3,4,4,2,5,"['Active listening', 'Service orientation', 'Instructing', 'Social perceptiveness']"
