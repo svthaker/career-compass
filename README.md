@@ -1,95 +1,89 @@
-# Career Compass — ADS-599 Capstone Project
+# Career Compass
+### Data-Driven Career Recommendation System
 
-Career Compass is a data-driven occupation recommender: it matches a user's self-reported
-interests, skills, and education/job-zone preferences to real occupations, using O*NET
-30.3 occupational characteristics merged with BLS OEWS (May 2025) wage and employment
-data. Because there's no single "correct" occupation for a person, the system is built
-and evaluated as a similarity-matching / ranking problem rather than a classifier.
+Career Compass is an end-to-end data science application that recommends occupations based on a user's interests, skills, education, and career preferences. The system integrates occupational characteristics from **O*NET 30.3** with **BLS Occupational Employment and Wage Statistics (OEWS)** to provide personalized, data-driven career recommendations.
 
-The project has three pieces, built in sequence:
+Rather than treating career selection as a traditional classification problem with a single "correct" answer, Career Compass approaches career recommendation as a **similarity-matching and ranking problem**, identifying occupations that best align with each user's individual profile.
 
-1. **Data preparation & EDA** — merges O*NET and BLS into one master dataset and
-   documents it.
-2. **Career Compass recommender** — a self-contained package with four recommenders
-   (baseline, weighted compatibility, cosine similarity, and KNN under four distance
-   metrics) plus a Streamlit prototype.
-3. **Model evaluation** — scores every recommender against hand-curated ground truth
-   using Precision, Recall, MRR, NDCG, and catalog coverage.
+## Project Highlights
 
-## Navigation
+- Integrated O*NET and BLS OEWS data into a unified dataset containing **1,016 occupations and 408 features**
+- Achieved a **94.6% O*NET-to-BLS occupational match rate**
+- Engineered features representing interests, skills, education, job zone, wages, and labor-market characteristics
+- Developed and compared **Baseline, Weighted Compatibility, Cosine Similarity, and K-Nearest Neighbors (KNN)** recommendation approaches
+- Evaluated KNN using **Euclidean, Manhattan, Minkowski, and Cosine distance metrics**
+- Evaluated recommendation quality using **Precision@K, Recall@K, Hit Rate, Mean Reciprocal Rank (MRR), NDCG@10, and catalog coverage**
+- Developed an interactive **Streamlit application** for user-driven career recommendations
 
-```
-/
-├── code/                    Data prep script + all EDA/evaluation notebooks
-├── data/                    Merged master dataset, BLS extract, and data-quality reports
-├── other_material/          Raw-source data dictionaries and the pre-merge EDA report
-├── Person_1_Career_Compass/ The recommender system itself (self-contained sub-project)
-├── README_DELIVERABLES.md   Data-prep deliverables notes (Paul Matta)
-└── README.md                
-```
+## Recommendation System
 
-| Path | Description |
-|---|---|
-| [`code/data_preparation_feature_engineering.py`](code/data_preparation_feature_engineering.py) | Merges raw O*NET + BLS OEWS into `data/career_compass_master.csv`, along with data-quality/feature-dictionary reports |
-| [`code/ONET_EDA.ipynb`](code/ONET_EDA.ipynb) | Pre-merge EDA on the raw O*NET tables |
-| [`code/OEWS_EDA.ipynb`](code/OEWS_EDA.ipynb) | Pre-merge EDA on the raw BLS OEWS data |
-| [`code/CapstoneFinalEDA.ipynb`](code/CapstoneFinalEDA.ipynb) | Post-merge EDA on the combined master dataset |
-| [`code/Person3_Evaluation_Clean.ipynb`](code/Person3_Evaluation_Clean.ipynb) | Ground-truth evaluation of every recommender (Precision/Recall/MRR/NDCG/coverage) |
-| [`data/`](data/) | Master dataset and every report `data_preparation_feature_engineering.py` produces |
-| [`other_material/`](other_material/) | Raw O*NET/OEWS data dictionaries and the pre-merge EDA report |
-| [`Person_1_Career_Compass/`](Person_1_Career_Compass/README.md) | The recommender package: questionnaire, four models, Streamlit app |
-| [`README_DELIVERABLES.md`](README_DELIVERABLES.md) | How to run the data-prep script and what it outputs |
+Career Compass compares a user's questionnaire responses against occupational characteristics and ranks careers according to compatibility.
 
-## The three projects
+Four recommendation approaches were developed:
 
-### 1. Data preparation & feature engineering
+1. **Baseline Model** — ranks occupations using wage and employment opportunity
+2. **Weighted Compatibility** — combines interests, skills, education, job-zone, and labor-market factors using interpretable weights
+3. **Cosine Similarity** — ranks occupations according to similarity between user and occupation feature vectors
+4. **K-Nearest Neighbors (KNN)** — identifies similar occupations using Euclidean, Manhattan, Minkowski, and Cosine distance metrics
 
-Merges the O*NET 30.3 occupational-characteristics database with the May 2025 BLS OEWS
-wage/employment release into one master dataset (1,016 occupations, 408 columns, 94.6%
-O*NET-to-BLS match rate). Run instructions and full output list are in
-[`README_DELIVERABLES.md`](README_DELIVERABLES.md). Pre-merge EDA on each raw source
-lives in `code/ONET_EDA.ipynb` and `code/OEWS_EDA.ipynb`; post-merge EDA on the combined
-dataset is in `code/CapstoneFinalEDA.ipynb`. Schema references and a narrative
-data-quality report (including a quantified O*NET-SOC-to-OEWS join-key mismatch: 67 of
-798 OEWS codes map to more than one O*NET-SOC code) are in `other_material/`.
+![Career Compass Pipeline](Person_1_Career_Compass/figures/career_compass_project_pipeline.png)
 
-### 2. Career Compass recommender
+## Model Evaluation
 
-Lives entirely in [`Person_1_Career_Compass/`](Person_1_Career_Compass/README.md) as a
-self-contained package (its own `src/`, `data/`, `outputs/`, `figures/`, and
-`requirements.txt`). See that folder's README for setup and run instructions. It takes
-a short questionnaire response and ranks occupations four ways:
+Recommendation models were evaluated against hand-curated relevant occupations for test user profiles using:
 
-- **Baseline** — wage/employment opportunity only
-- **Weighted Compatibility** — interpretable, weighted blend of interest/skill/education/
-  job-zone/labor-market component scores
-- **Cosine Similarity** — ranks the full catalog by cosine similarity to the user's
-  combined feature vector
-- **KNN** — nearest-neighbor search over the same feature space, under four distance
-  metrics (euclidean, manhattan, minkowski, cosine)
+- Precision@5 and Precision@10
+- Recall@5 and Recall@10
+- Hit Rate@5 and Hit Rate@10
+- Mean Reciprocal Rank (MRR)
+- NDCG@10
+- Catalog Coverage
 
-![Career Compass pipeline](Person_1_Career_Compass/figures/career_compass_project_pipeline.png)
+Among the evaluated configurations, **KNN using Minkowski distance (p=3)** produced the strongest overall performance on **NDCG@10 and MRR**, while Cosine Similarity and KNN-Cosine were competitive on Precision and Recall.
 
-*End-to-end pipeline, generated by `Person_1_Career_Compass/src/create_pipeline_figure.py`.*
+The wage/employment baseline performed substantially worse across the evaluation metrics, demonstrating the value of incorporating user interests, skills, education, and occupational characteristics into career recommendations.
 
-### 3. Model evaluation
+## Data Pipeline
 
-`code/Person3_Evaluation_Clean.ipynb` scores all seven recommender configurations
-(Baseline, Weighted Compatibility, Cosine Similarity, and KNN under each of its four
-distance metrics) against ten hand-picked, genuinely-relevant occupations per test
-profile. It reports Precision@5/10, Recall@5/10, Hit
-Rate@5/10, MRR, NDCG@10, and catalog coverage, because a recommender needs both relevant
-results near the top of the list and results that actually vary across user profiles. On the current test profiles, KNN with the Minkowski
-(p=3) distance metric performs best on NDCG@10 and MRR, with Cosine Similarity and
-KNN-cosine tied on raw Precision/Recall@10; the plain wage/employment
-Baseline model scores lowest across every metric, including coverage, since it ignores
-interests and skills entirely and returns nearly the same list for any given user.
+The project combines two major U.S. labor-market data sources:
 
-## Branches
+**O*NET 30.3**
+- Occupational skills
+- Knowledge areas
+- Interests
+- Abilities
+- Work activities
+- Education and job-zone characteristics
 
-| Branch | Purpose |
-|---|---|
-| `main` | Active development — data prep, the Career Compass recommender, and evaluation. |
-| ~~`data_summary_EDA`~~ | Early exploratory-data-analysis work (raw O*NET/OEWS data dictionaries, an initial EDA report, and a pre-merge O*NET EDA notebook) done before `main` had its own data preparation script and post-merge EDA notebooks. Its unique content (`ONET_EDA.ipynb`, `ONET_data_dictionary.md`, `OEWS_data_dictionary.md`, `EDA_Report.md`) was ported into `code/` and `other_material/` above; the branch itself has since been deleted since nothing on it was left unmerged. |
+**BLS OEWS — May 2025**
+- Occupational employment
+- Mean and percentile wages
+- Labor-market statistics
 
-*Note: The README and data dictionaries were structured with the help of Claude Sonnet 5.*
+The resulting master dataset contains **1,016 occupations across 408 features** and serves as the foundation for the recommendation system.
+
+## Technologies
+
+**Languages & Libraries:** Python, pandas, NumPy, scikit-learn  
+**Machine Learning:** K-Nearest Neighbors, Cosine Similarity, Feature Scaling, Similarity-Based Ranking  
+**Data Science:** Feature Engineering, EDA, Data Integration, Model Evaluation  
+**Application:** Streamlit  
+**Development:** Jupyter Notebook, Git, GitHub
+
+## Repository Structure
+
+```text
+career-compass/
+│
+├── code/                     # Data preparation, EDA, and evaluation notebooks
+├── data/                     # Processed datasets and data-quality outputs
+├── other_material/           # Data dictionaries and supporting documentation
+├── Person_1_Career_Compass/  # Recommendation system and Streamlit application
+│   ├── src/                  # Modeling and application modules
+│   ├── data/                 # Application data
+│   ├── outputs/              # Model results and evaluation outputs
+│   ├── figures/              # Pipeline visualization
+│   ├── app.py                # Streamlit application
+│   └── requirements.txt
+│
+└── README.md
